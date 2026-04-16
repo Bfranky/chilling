@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --burgundy: #5C1A1A;
+  --burgundy-light: #7A2323;
+  --gold: #C9A84C;
+  --gold-light: #E2C16B;
+  --charcoal: #1A1A1A;
+  --cream: #FAF3E0;
+  --cream-dark: #F0E6CC;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--charcoal);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.font-display { font-family: 'Playfair Display', serif; }
+
+.shimmer-text {
+  background: linear-gradient(90deg, #C9A84C 0%, #FAF3E0 40%, #C9A84C 60%, #E2C16B 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.section-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,168,76,0.4), transparent);
+}
